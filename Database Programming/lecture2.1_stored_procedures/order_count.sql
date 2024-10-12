@@ -1,3 +1,9 @@
+/* Create a stored procedure that groups every customer (incl. those who have not yet ordered)
+according to the number of orders they have placed into groups A, B and C. The thresholds should be passed using parameters.
+- Customers having limit_1 or more orders belong to class A
+- Customers having between limit_2 and limit_1 - 1 orders belong to class B
+- All other customers belong to group C */
+
 USE thisandthat;
 DELIMITER $$
 DROP PROCEDURE IF EXISTS order_count$$

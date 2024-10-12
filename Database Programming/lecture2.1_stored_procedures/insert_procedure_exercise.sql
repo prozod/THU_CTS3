@@ -1,3 +1,11 @@
+/* Create a procedure for the generic version of task 1 (insert a new article).
+TIPS:
+- All parameters should be IN parameters
+- Of course only one article group can be passed
+- Check if the article group exists using branching
+- Remember the procedure can be executed using CALL procedure_name;
+- Mind the DELIMITER problem */
+
 USE thisandthat;
 DELIMITER $$
 DROP PROCEDURE IF EXISTS insert_article$$ -- remove because there is no such thing as "ALTER"-ing a procedure, you delete old one then create it again.
