@@ -1,4 +1,4 @@
-CALL delete_order_pos(1, 7856);
+CALL delete_order_pos(2, 7856);
 
 /* 
 - deci fiecare INVOICE are un ORDER_ID atasat (numarul comenzii)
@@ -19,7 +19,7 @@ FROM INVOICE i
 JOIN INVOICE_POSITION ip ON i.INVOICE_ID = ip.INVOICE_ID 
 JOIN `ORDER` o ON i.ORDER_ID = o.ORDER_ID 
 JOIN ORDER_POSITION op ON op.ORDER_ID = o.ORDER_ID 
-WHERE o.ORDER_ID = 1;
+WHERE o.ORDER_ID = 3;
 
 SELECT * FROM ORDER_POSITION;
 SELECT * FROM INVOICE_POSITION;

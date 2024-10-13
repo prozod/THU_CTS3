@@ -16,7 +16,7 @@ BEGIN
 
     IF (ORDER_STATUS > 0) 
     THEN
-		-- creezi un invoice, preiau ID-ul 
+		-- creezi un invoice, preiau ID-ul
 		-- pe urma pt. fiecare articol care apartine comenzii, faci un invoice position si il atasezi INVOICE-ului
         INSERT INTO INVOICE (ORDER_ID, PAYMENT_TYPE, STATUS, INVOICE_DATE, DISCOUNT, SKONTO, DELETED)
         VALUES (ORD_ID, 'CREDITCARD', 'OPEN', CURRENT_TIMESTAMP(), 5.00, 5.00, 0);
