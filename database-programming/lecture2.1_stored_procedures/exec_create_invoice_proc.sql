@@ -1,4 +1,4 @@
-CALL create_invoice(10);
+CALL create_transactional_invoice(9);
 
 -- sa vad daca exista comenzi fara un invoice
 SELECT c.FIRSTNAME, c.LASTNAME, O.ORDER_ID, O.CUSTOMER_ID, O.ORDER_DATE
