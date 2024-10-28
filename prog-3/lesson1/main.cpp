@@ -1,54 +1,19 @@
+#include "assignment_1/ex1_1.cpp"
+#include "assignment_1/ex1_2.cpp"
+#include "assignment_1/ex1_3.cpp"
+#include <algorithm>
 #include <iostream>
-#include <string>
-#include "myLib.h"
+#include <vector>
+using namespace std;
 
-class Counter
-{
-public:
-  Counter(int num)
-  {
-    this->_counter = num;
-  };
+int main() {
+  std::vector<int> grades = {2, 4, 6, 8, 10};
+  std::vector<int> newGrades(grades.size());
 
-  std::string yell();
+  std::transform(grades.cbegin(), grades.cend(), grades.begin(),
+                 [](int x) { return x * x; });
 
-  void increment()
-  {
-
-    this->_counter++;
+  for (int grade : grades) {
+    std::cout << grade << " ";
   }
-
-  int getCount()
-  {
-    return this->_counter;
-  }
-
-private:
-  int _counter;
-};
-
-int main()
-{
-  int a = 2;
-  for (int i = 0; i < 10; i++)
-  {
-    a++;
-    std::cout << a << std::endl;
-  }
-  drawLine();
-  saySomething();
-  drawLine();
-
-  Counter countee(0);
-  countee.increment();
-  std::cout << countee.getCount() << std::endl;
-
-  std::cout << countee.yell();
-
-  return 0;
 }
-
-std::string Counter::yell()
-{
-  return "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-};

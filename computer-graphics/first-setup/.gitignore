@@ -1,2 +1,4 @@
 app.dSYM/
+.idea
 .vscode
+cmake-build-debug/
